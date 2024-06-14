@@ -29,6 +29,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 app.use(express.json());
 
+
+app.get("/",(req,res)=>{
+res.send("Ahmed Raza")
+})
+
 // Important Api
 app.get("/api/v1/products", async (req, res) => {
   try {
